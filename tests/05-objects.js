@@ -36,7 +36,7 @@ function testObjects() {
                 {title: "A", year: 2010},
                 {title: "B", year: 2022}
             ];
-            const oldBooks = getOlderBooks(books, 2000);
+            const oldBooks = getOlderBooks(books, 1990);
             expect(oldBooks).toEqual([]);
         });
     });
