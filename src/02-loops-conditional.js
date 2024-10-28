@@ -10,7 +10,7 @@
  */
 
 function getNextEven(n) {
-
+    return(2 * Math.round((n +1.1) / 2) );
 }
 
 
@@ -27,7 +27,12 @@ function getNextEven(n) {
  */
 
 function isMultipleOf(n, m) {
-
+    const remainder = n % m;
+    if (remainder === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
@@ -42,7 +47,7 @@ function isMultipleOf(n, m) {
  * const anotherCapitalCount = countCapitals("JavaScript"); // anotherCapitalCount will be 2
  */
 function countCapitals(str) {
-
+    return((str.match(/[A-Z]/g) || '').length);
 }
 
 
@@ -58,5 +63,12 @@ function countCapitals(str) {
  * const anotherCount = countVowelsInWords("apple", "banana"); // anotherCount will be 5
  */
 function countVowelsInWords(word1, word2) {
-
+    const sentence = `${word1}${word2}`
+    let count = 0;
+    for (let char of sentence) {
+        if ('aeiouæøåAEIOUÆØÅ'.includes(char)) {
+            count++;
+        }
+    }
+    return count;
 }
